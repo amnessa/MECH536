@@ -22,15 +22,3 @@ right Singular vectors are eigenvectors of M^TM
 theres a code in slide also in hoca's math github function that utilizes svd maybe more. Check closely
 
 
-def GenerateSubspacesMin(D=5, dS1=2, dS2=2, nS1=50, nS2=50, minimalAngle=0):
-    '''
-    This function generates 2 data matrices in subspaces S1 and S2 respectively that live in D dimensional ambient space
-    dSi is the dimension of subspace Si
-    nSi is the number of data points to be generated in subspace Si
-    minimalAngle is the minimal angle between subspaces, recall the definition in lecture notes
-    Function returns two numpy arrays: M1, M2
-    where:
-        dimension of matrix Mi is (D, nSi)
-        rank(Mi) = dSi
-    if passed data does not make sense, return two empty numpy arrays
-    '''
