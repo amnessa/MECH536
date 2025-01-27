@@ -1,4 +1,15 @@
 .venv
 me_term_project/NEU_Metal_Surface_Defects_Data
 me_term_project/archive.zip
+me_term_project/NEU_Metal_Surface_Defects_Data_Preproc
+me_term_project/NEU_dataset
+me_term_project/example_bmp
+me_term_project/vgg16.h5
 me_term_project/NEU_Metal_Surface_Defects_Data_Preprocessed
+me_term_project/archive/NEU_Metal_Surface_Defects_Data
+data
+models
+me_term_project/vgg16.h5
+me_term_project/archive.zip
+me_term_project/best_model.h5
+me_term_project/best_model.h5
