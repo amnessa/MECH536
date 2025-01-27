@@ -35,10 +35,22 @@ def pano_plot(x, y, paths, patch_size=(3, 3), ax0=None):
     else:
         ax = ax0
     px, py = patch_size
-    ax.scatter(x, y, color=(0, 0, 0, 0))
+    ax.scatter(x, y, color=(0, 0, 0, 0))  # Transparent points to set initial axis limits
+    
+    # Disable autoscaling so subsequent imshow calls don't reset axis limits
+    ax.autoscale(False)
+    
     for xi, yi, pi in zip(x, y, paths):
         im = skimage.io.imread(pi)
         ax.imshow(im, extent=(xi - px, xi + px, yi - py, yi + py), cmap='gray')
+    
+    # Calculate axis limits to include all images
+    x_min = np.min(x) - px
+    x_max = np.max(x) + px
+    y_min = np.min(y) - py
+    y_max = np.max(y) + py
+    ax.set_xlim(x_min, x_max)
+    ax.set_ylim(y_min, y_max)
 
     if ax0 is None:
         plt.show()
